@@ -43,8 +43,8 @@ SELECT COUNT(Sname) FROM SalesPeople WHERE Sname LIKE 'a%';
 /* Question 2 -- Display all the Salesperson whose all orders worth is more than Rs. 2000.   */
 SELECT SalesPeople.Sname, SUM(Orders.Amt) AS orders_worth FROM SalesPeople
 JOIN Orders ON Orders.Snum=SalesPeople.Snum
-GROUP BY Cnum
-HAVING SUM(Amt)>2000;
+GROUP BY Sname
+HAVING SUM(amt) > 2000;
 
 
 /* Queston 3 -- Count the number of Salesperson belonging to Newyork   */
